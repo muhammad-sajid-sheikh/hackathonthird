@@ -46,14 +46,14 @@ export async function POST(request: NextRequest) {
 
     // Ensure database connection
     if (mongoose.connection.readyState === 0) {
-      await mongoose.connect(connectionSrt); // Simplified connection
+      await mongoose.connect(connectionSrt);
       console.log("Database connected successfully.");
     } else {
       console.log("Using existing database connection.");
     }
 
     // Parse the request body
-    const body: LocalBody = await request.json();
+    const body = (await request.json()) as LocalBody;
     console.log("Received request body:", body);
 
     // Validate the request body
@@ -79,13 +79,13 @@ export async function POST(request: NextRequest) {
     console.log("Order saved successfully.");
 
     return NextResponse.json({ message: 'Order placed successfully', success: true }, { status: 201 });
-  } catch (error: any) {
-    console.error("Error details:", error.message);
-    return NextResponse.json({ message: 'Internal Server Error', error: error.message }, { status: 500 });
+  } catch (error) {
+    console.error("Error details:", (error as Error).message);
+    return NextResponse.json({ message: 'Internal Server Error', error: (error as Error).message }, { status: 500 });
   }
 }
 
-export async function GET(req: NextRequest) {
+export async function GET(_req: NextRequest) {
   try {
     console.log("GET request received.");
 
@@ -102,18 +102,17 @@ export async function GET(req: NextRequest) {
     const orders = await Order.find();
     console.log("Fetched orders:", orders);
 
-    // Return response with proper CORS headers
     return new NextResponse(JSON.stringify(orders), {
       status: 200,
       headers: {
         'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*', // Allow requests from all origins
+        'Access-Control-Allow-Origin': '*',
         'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',
         'Access-Control-Allow-Headers': 'Content-Type, Authorization',
       },
     });
-  } catch (error: any) {
-    console.error("Error in GET method:", error.message);
-    return NextResponse.json({ message: 'Error fetching orders', error: error.message }, { status: 500 });
+  } catch (error) {
+    console.error("Error in GET method:", (error as Error).message);
+    return NextResponse.json({ message: 'Error fetching orders', error: (error as Error).message }, { status: 500 });
   }
 }

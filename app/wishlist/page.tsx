@@ -1,13 +1,13 @@
 "use client";
 
 
-import { useState } from "react";
+
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "@/store/wishstore";
 import Image from "next/image";
-import Link from "next/link";
+
 import { Button } from "@/components/ui/button";
-import { addToWishList, clearWishList, removeWishList, WishItem } from "@/store/wishSlice";
+import { addToWishList, removeWishList, WishItem } from "@/store/wishSlice";
 import { useToast } from "@/hooks/use-toast";
 
 function WishListPage() {
