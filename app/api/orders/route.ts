@@ -79,13 +79,16 @@ export async function POST(request: NextRequest) {
     console.log("Order saved successfully.");
 
     return NextResponse.json({ message: 'Order placed successfully', success: true }, { status: 201 });
-  } catch (error: any) {
-    console.error("Error details:", error.message);
-    return NextResponse.json({ message: 'Internal Server Error', error: error.message }, { status: 500 });
+  } catch (error: unknown) {  // 🛠 `any` ko `unknown` se replace kiya
+    if (error instanceof Error) {
+      console.error("Error details:", error.message);
+      return NextResponse.json({ message: 'Internal Server Error', error: error.message }, { status: 500 });
+    }
+    return NextResponse.json({ message: 'Internal Server Error' }, { status: 500 });
   }
 }
 
-export async function GET(req: NextRequest) {
+export async function GET(_: NextRequest) { // 🛠 `req` ko `_` se replace kiya taake unused variable error na aaye
   try {
     console.log("GET request received.");
 
@@ -112,8 +115,11 @@ export async function GET(req: NextRequest) {
         'Access-Control-Allow-Headers': 'Content-Type, Authorization',
       },
     });
-  } catch (error: any) {
-    console.error("Error in GET method:", error.message);
-    return NextResponse.json({ message: 'Error fetching orders', error: error.message }, { status: 500 });
+  } catch (error: unknown) { // 🛠 `any` hata kar `unknown` use kiya
+    if (error instanceof Error) {
+      console.error("Error in GET method:", error.message);
+      return NextResponse.json({ message: 'Error fetching orders', error: error.message }, { status: 500 });
+    }
+    return NextResponse.json({ message: 'Error fetching orders' }, { status: 500 });
   }
 }

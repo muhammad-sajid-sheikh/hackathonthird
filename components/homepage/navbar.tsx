@@ -1,9 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { FaUserEdit } from "react-icons/fa";
 import { CiSearch } from "react-icons/ci";
-import { FaRegHeart } from "react-icons/fa";
 import { IoMdMenu, IoMdClose } from "react-icons/io";
 import Link from "next/link";
 import useInvalidPaths from "@/lib/use-invalid-path";
