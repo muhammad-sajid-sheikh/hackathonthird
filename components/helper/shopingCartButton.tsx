@@ -9,7 +9,7 @@ import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
 
 function ShoppingCartButton() {
   const items = useSelector((state: RootState) => state.cart.items);
-  const totalQuantity = items.reduce((total: any, item: { quantity: any; }) => total + item.quantity, 0);
+  const totalQuantity = items.reduce((total, item) => total + item.quantity, 0);
 
   return (
     <Sheet>
