@@ -1,0 +1,378 @@
+// import { NextResponse } from "next/server";
+
+// const products =
+// [
+//         {
+//             id:1,
+//             image:"/images/p1.png",
+//             title:"Bedroom",
+//             category: "Home Appliances",
+//             discription:"bedroom items",
+//             price:"2055",
+//             priceline:"3333",
+//             off:"30%",
+//             rating:{
+//                 rate:2.1,
+//                 count:120,
+//                             },
+//         },
+//         {
+//             id:2,
+//             image:"/images/p2.png",
+//             title:"Bedroom",
+//             category: "Shop Appliances",
+//             discription:"bedroom items",
+//             price:"2555",
+//             priceline:"3333",
+//             off:"30%",
+//             rating:{
+//                 rate:2.1,
+//                 count:120,
+//                             },
+//         },
+//         {
+//             id:3,
+//             image:"/images/p3.png",
+//             title:"Bedroom",
+//             category: "Home Appliances",
+//             discription:"bedroom items",
+//             price:"2555",
+//             priceline:"3333",
+//             off:"30%",
+//             rating:{
+//                 rate:2.1,
+//                 count:120,
+//                             },
+//         },
+//         {
+//             id:4,
+//             image:"/images/p4.png",
+//             title:"Bedroom",
+//             category: "Shop Appliances",
+//             discription:"bedroom items",
+//             price:"2555",
+//             priceline:"3333",
+//             off:"30%",
+//             rating:{
+//                 rate:2.1,
+//                 count:120,
+//                             },
+//         },
+//         {
+//             id:5,
+//             image:"/images/p5.png",
+//             title:"Bedroom",
+//             category: "Home Appliances",
+//             discription:"bedroom items",
+//             price:"2555",
+//             priceline:"3333",
+//             off:"30%",
+//             rating:{
+//                 rate:2.1,
+//                 count:120,
+//                             },
+//         },
+//         {
+//             id:6,
+//             image:"/images/p6.png",
+//             title:"Bedroom",
+//             category: "Shop Appliances",
+//             discription:"bedroom items",
+//             price:"2555",
+//             priceline:"3333",
+//             off:"30%",
+//             rating:{
+//                 rate:2.1,
+//                 count:120,
+//                             },
+//         },
+//         {
+//             id:7,
+//             image:"/images/p7.png",
+//             title:"Bedroom",
+//             category: "Home Appliances",
+//             discription:"bedroom items",
+//             price:"2555",
+//             priceline:"3333",
+//             off:"30%",
+//             rating:{
+//                 rate:2.1,
+//                 count:120,
+//                             },
+//         },
+//         {
+//             id:8,
+//             image:"/images/p8.png",
+//             title:"Bedroom",
+//             category: "Shop Appliances",
+//             discription:"bedroom items",
+//             price:"2555",
+//             priceline:"3333",
+//             off:"30%",
+//             rating:{
+//                 rate:2.1,
+//                 count:120,
+//                             },
+//         },
+//         {
+//             id:9,
+//             image:"/images/p3.png",
+//             title:"Bedroom",
+//             category: "Home Appliances",
+//             discription:"bedroom items",
+//             price:"2555",
+//             priceline:"3333",
+//             off:"30%",
+//             rating:{
+//                 rate:2.1,
+//                 count:120,
+//                             },
+//         },
+//         {
+//             id:10,
+//             image:"/images/p4.png",
+//             title:"Bedroom",
+//             category: "Home Appliances",
+//             discription:"bedroom items",
+//             price:"2555",
+//             priceline:"3333",
+//             off:"30%",
+//             rating:{
+//                 rate:2.1,
+//                 count:120,
+//                             },
+//         },
+//         {
+//             id:11,
+//             image:"/images/p5.png",
+//             title:"Bedroom",
+//             category: "Shop Appliances",
+//             discription:"bedroom items",
+//             price:"2555",
+//             priceline:"3333",
+//             off:"30%",
+//             rating:{
+//                 rate:2.1,
+//                 count:120,
+//                             },
+//         },
+//         {
+//             id:12,
+//             image:"/images/p6.png",
+//             title:"Bedroom",
+//             category: "Home Appliances",
+//             discription:"bedroom items",
+//             price:"2555",
+//             priceline:"3333",
+//             off:"30%",
+//             rating:{
+//                 rate:2.1,
+//                 count:120,
+//                             },
+//         },
+//         {
+//             id:13,
+//             image:"/images/p7.png",
+//             title:"Bedroom",
+//             category: "Home Appliances",
+//             discription:"bedroom items",
+//             price:"2555",
+//             priceline:"3333",
+//             off:"30%",
+//             rating:{
+//                 rate:2.1,
+//                 count:120,
+//                             },
+//         },
+//         {
+//             id:14,
+//             image:"/images/p8.png",
+//             title:"Bedroom",
+//             category: "Shop Appliances",
+//             discription:"bedroom items",
+//             price:"2555",
+//             priceline:"3333",
+//             off:"30%",
+//             rating:{
+//                 rate:2.1,
+//                 count:120,
+//                             },
+//         },
+//         {
+//             id:15,
+//             image:"/images/p8.png",
+//             title:"Bedroom",
+//             category: "Shop Appliances",
+//             discription:"bedroom items",
+//             price:"2555",
+//             priceline:"3333",
+//             off:"30%",
+//             rating:{
+//                 rate:2.1,
+//                 count:120,
+//                             },
+//         },
+//         {
+//             id:16,
+//             image:"/images/p8.png",
+//             title:"Bedroom",
+//             category: "Shop Appliances",
+//             discription:"bedroom items",
+//             price:"2555",
+//             priceline:"3333",
+//             off:"30%",
+//             rating:{
+//                 rate:2.1,
+//                 count:120,
+//                             },
+//         },
+//         {
+//             id:17,
+//             image:"/images/p8.png",
+//             title:"Bedroom",
+//             category: "Shop Appliances",
+//             discription:"bedroom items",
+//             price:"2555",
+//             priceline:"3333",
+//             off:"30%",
+//             rating:{
+//                 rate:2.1,
+//                 count:120,
+//                             },
+//         },
+//         {
+//             id:18,
+//             image:"/images/p8.png",
+//             title:"Bedroom",
+//             category: "Shop Appliances",
+//             discription:"bedroom items",
+//             price:"2555",
+//             priceline:"3333",
+//             off:"30%",
+//             rating:{
+//                 rate:2.1,
+//                 count:120,
+//                             },
+//         },
+//         {
+//             id:19,
+//             image:"/images/p8.png",
+//             title:"Bedroom",
+//             category: "Shop Appliances",
+//             discription:"bedroom items",
+//             price:"2555",
+//             priceline:"3333",
+//             off:"30%",
+//             rating:{
+//                 rate:2.1,
+//                 count:120,
+//                             },
+//         },
+//         {
+//             id:20,
+//             image:"/images/p8.png",
+//             title:"Bedroom",
+//             category: "Shop Appliances",
+//             discription:"bedroom items",
+//             price:"2555",
+//             priceline:"3333",
+//             off:"30%",
+//             rating:{
+//                 rate:2.1,
+//                 count:120,
+//                             },
+//         },
+//         {
+//             id:21,
+//             image:"/images/p8.png",
+//             title:"Bedroom",
+//             category: "Shop Appliances",
+//             discription:"bedroom items",
+//             price:"2555",
+//             priceline:"3333",
+//             off:"30%",
+//             rating:{
+//                 rate:2.1,
+//                 count:120,
+//                             },
+//         },
+//         {
+//             id:22,
+//             image:"/images/p8.png",
+//             title:"Bedroom",
+//             category: "Shop Appliances",
+//             discription:"bedroom items",
+//             price:"2555",
+//             priceline:"3333",
+//             off:"30%",
+//             rating:{
+//                 rate:2.1,
+//                 count:120,
+//                             },
+//         },
+//         {
+//             id:23,
+//             image:"/images/p8.png",
+//             title:"Bedroom",
+//             category: "Shop Appliances",
+//             discription:"bedroom items",
+//             price:"2555",
+//             priceline:"3333",
+//             off:"30%",
+//             rating:{
+//                 rate:2.1,
+//                 count:120,
+//                             },
+//         },
+//         {
+//             id:24,
+//             image:"/images/p8.png",
+//             title:"Bedroom",
+//             category: "Shop Appliances",
+//             discription:"bedroom items",
+//             price:"2555",
+//             priceline:"3333",
+//             off:"30%",
+//             rating:{
+//                 rate:2.1,
+//                 count:120,
+//                             },
+//         },
+//         {
+//             id:25,
+//             image:"/images/p8.png",
+//             title:"Bedroom",
+//             category: "Shop Appliances",
+//             discription:"bedroom items",
+//             price:"2555",
+//             priceline:"3333",
+//             off:"30%",
+//             rating:{
+//                 rate:2.1,
+//                 count:120,
+//                             },
+//         },
+//     ];
+//     export function GET(request: Request) {
+//         const { searchParams } = new URL(request.url);
+      
+//         // Get `page` and `limit` from query params (default values: page=1, limit=12)
+//         const page = parseInt(searchParams.get("page") || "1", 10);
+//         const limit = parseInt(searchParams.get("limit") || "12", 10);
+      
+//         // Calculate start and end indices
+//         const startIndex = (page - 1) * limit;
+//         const endIndex = startIndex + limit;
+      
+//         // Slice the products array to get the current page's products
+//         const paginatedProducts = products.slice(startIndex, endIndex);
+      
+//         return NextResponse.json({
+//           products: paginatedProducts,
+//           totalProducts: products.length,
+//           currentPage: page,
+//           totalPages: Math.ceil(products.length / limit),
+//         });
+//       }
+
+
